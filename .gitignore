@@ -1,0 +1,12 @@
+build
+node_modules
+bootstrap.min.css
+bootstrap.min.css.map
+main.css
+fonts
+bootstrap.min.js
+ipfs-mini.js
+truffle-contract.js
+web3new.min.js
+package-lock.json
+package.json

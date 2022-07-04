@@ -1,0 +1,305 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <style>
+        .alert-secondary {
+            color: #bef6f6;
+        }
+    </style>
+
+</head>
+<body>
+    <br>
+	<h1>MatinJiri</h1>
+
+
+
+        <div class="alert alert-secondary Alertmargin" role="alert">
+            <div class="row" style="text-align: center;font-size: 20px;">
+                <b>NFT Specifictions</b>
+                <hr>
+                <div class="col-md-6">
+                    <b>NFTName</b> : <span id="NFTName"></span>
+                </div>
+                <div class="col-md-6">
+                    <b>NFTSymbol</b> : <span id="NFTSymbol"></span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    <div class="alert alert-secondary Alertmargin" role="alert">
+        <div class="row" style="text-align: center;font-size: 20px;"> 
+                <b>CurrentAccount Specifications</b> 
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-9">
+                <b>Address</b>  : <span id="Address"></span>
+            </div>
+            <div class="col-md-3">
+                <b>balanceOf</b> : <span id="balanceOf_CurrentAccount"></span>
+            </div>              
+        </div>
+        <hr>
+        <div class="row">
+            <input type="file" id="fileimg" onchange="previewFile()"><br>
+            <img src="" alt="" id="imgnft">
+        </div>
+
+        <div class="row">
+            <button type="button" class="btn btn-primary btnmint" id="mint">Mint NFT</button>
+        </div>
+    </div>
+
+
+        <!-- ///////////////////////// -->
+
+
+    <div class="alert alert-dange Alertmargin">
+
+        <div class="row" style="text-align: center;font-size: 20px;">
+            <b>Owner Of NFT</b>
+        </div>
+
+        <hr>
+
+        <div class="row">
+
+            <div class="col-md-9">
+                <input class="form-control" type="number" id="tokenidowner" placeholder="token ID">
+            </div>
+
+            <div class="col-md-3">
+                <button class="btn btn-primary btn-block"  id="Owner">Owner</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="alert alert-dange Alertmargin" role="alert">
+
+        <div class="row" style="text-align: center;font-size: 20px;"> 
+                <b>Approve NFT</b> 
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="AddressToApprove" placeholder="Address To">
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="tokenIDApprove" placeholder="Token ID">
+            </div>     
+            <div class="col-md-2">
+                <button class="btn btn-primary btn-block" id="Approve">Approve</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    
+    <div class="alert alert-dange Alertmargin" role="alert">
+        <div class="row" style="text-align: center;font-size: 20px;"> 
+            <b>Get Approve NFT</b> 
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-9">
+                <input class="form-control" type="number" id="tokenidGetApprove" placeholder="Token ID">
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block" id="GetApprove">Get Approve</button>
+            </div>              
+        </div>       
+      </div>
+
+
+
+    <div class="alert alert-dange Alertmargin" role="alert">
+        <div class="row" style="text-align: center;font-size: 20px;"> 
+                <b>Set Approve NFT For All </b> 
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="AdressApprovalForAll" placeholder="Address To">
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="boolApprovalForAll" placeholder="true Or false">
+            </div>     
+            <div class="col-md-2">
+                <button class="btn btn-primary btn-block" id="setApprovalForAll">Approval For All</button>
+            </div>  
+        </div>
+    </div>
+
+
+
+
+    
+    <div class="alert alert-dange Alertmargin" role="alert">
+        <div class="row" style="text-align: center;font-size: 20px;"> 
+            <b>isApprovedForAll NFT</b> 
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-5">
+                <input class="form-control" type="text" id="AddressfromToApprove" placeholder="Address from">
+            </div>
+            <div class="col-md-5">
+                <input class="form-control" type="text" id="AddressToToApprove" placeholder="Address To">
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-primary btn-block" id="isApproved">isApproved</button>
+            </div>              
+        </div>
+        
+      </div>
+
+
+
+
+   
+      <div class="alert alert-dange Alertmargin" role="alert">
+
+        <div class="row" style="text-align: center;font-size: 20px;"> 
+            <b>TransferFrom NFT</b> 
+        </div>
+
+        <hr>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <input class="form-control" type="text" id="AdressFromTransfeFrom" placeholder="Address From">
+            </div>
+
+            <div class="col-md-6">
+                <input class="form-control" type="text" id="AdressToTransfeFrom" placeholder="Address To">
+            </div>
+
+        </div>
+
+        <div class="row">   
+
+            <div class="col-md-6">
+                <input class="form-control" type="number" id="IDAdressToTransfeFrom" placeholder="TokenID">
+            </div>
+
+            <div class="col-md-6">
+                <button type="button" class="btn btn-primary btn-block" id="TransfeFrom">TransfeFrom</button>
+            </div>    
+
+        </div>
+
+    </div>
+
+
+
+
+     
+    <div class="alert alert-dange Alertmargin" role="alert">
+
+        <div class="row" style="text-align: center;font-size: 20px;"> 
+            <b>Burn of NFT</b> 
+        </div>
+
+        <hr>
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <input class="form-control" type="number" id="tokenidburn" placeholder="Token ID">
+            </div>
+
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary btn-block" id="Burn">Burn</button>
+            </div>           
+
+        </div>
+        
+    </div>
+
+
+
+
+    
+    <div class="alert alert-dange Alertmargin" role="alert">
+
+        <div class="row" style="text-align: center;font-size: 20px;"> 
+            <b>Show NFT</b> 
+        </div>
+
+        <hr>
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <input class="form-control" type="number" id="tokenidShow" placeholder="Token ID">
+            </div>
+
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary btn-block" id="ShowNFT">Show NFT</button>
+            </div>          
+
+        </div>
+
+        <div class="row">
+            <div id="showimgnft">
+               
+            </div>
+        </div>
+        
+    </div>
+
+
+    
+		
+		<footer >
+			<div class="container" >
+				<div class="row">
+					<div class="col-lg-12 col-xl-4" >
+						<div class="footsec">
+							<div class="footlogocntSec">
+								<h5 class="textgraycolor mt-3 mb-4" ><span  style="color:#bef6f6" class="textbluecolor">Email :</span>
+									matinjiri@gmail.com</h5>
+								<h5  class="textgraycolor mt-3 mb-4"><span style="color:#bef6f6" class="textbluecolor">my GitHub :</span>
+									<a style="color: rgb(0, 179, 255);" href="https://github.com/MatinJiridity">MatinJiridity</a>
+								</h5>
+	
+							</div>
+
+						</div>
+					</div>
+	
+				</div>
+			</div>
+		</footer>
+
+
+	</div>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>  
+    <script src="js/web3new.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"></script>
+    <script src="js/ipfs-mini.js"></script>
+    <script src="js/app.js"></script>
+</html>
